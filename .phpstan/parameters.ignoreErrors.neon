@@ -1,0 +1,21 @@
+parameters:
+	ignoreErrors:
+		-
+			message: "#^Call to an undefined method Robo\\\\Collection\\\\CollectionBuilder\\:\\:callReplaceMatches\\(\\)\\.$#"
+			count: 1
+			path: ../src/Robo/Task/GitCommitMsgValidatorTask.php
+
+		-
+			message: "#^Unsafe usage of new static\\(\\)\\.$#"
+			count: 1
+			path: ../tests/src/Helper/DummyOutput.php
+
+		-
+			message: "#^Call to an undefined method Drupal\\\\marvin_git\\\\Robo\\\\Task\\\\GitCommitMsgValidatorTask\\|Robo\\\\Collection\\\\CollectionBuilder\\:\\:setContainer\\(\\)\\.$#"
+			count: 1
+			path: ../tests/src/Unit/Robo/Task/GitCommitMsgValidatorTaskTest.php
+
+		-
+			message: "#^Call to an undefined method League\\\\Container\\\\ContainerAwareInterface\\:\\:run\\(\\)\\.$#"
+			count: 1
+			path: ../tests/src/Unit/Robo/Task/GitCommitMsgValidatorTaskTest.php

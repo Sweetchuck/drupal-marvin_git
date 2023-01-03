@@ -1,0 +1,26 @@
+parameters:
+	typeAliases:
+		marvin-git-commit-msg-validator-rule-example: '''
+			array{
+				enabled: bool,
+				is_valid: bool,
+				description: string,
+				example: string,
+			}
+		'''
+		marvin-git-commit-msg-validator-rule: '''
+			array{
+				enabled: bool,
+				name: string,
+				description: string,
+				pattern: string,
+				examples?: array<string, marvin-git-commit-msg-validator-rule-example>,
+			}
+		'''
+		marvin-git-robo-task-commit-msg-validator-options: '''
+			array{
+				assetNamePrefix?: string,
+				fileName?: string,
+				rules?: array<string, mixed>,
+			}
+		'''
